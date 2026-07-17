@@ -1,0 +1,22 @@
+server:
+  port: ${SERVER_PORT:8083}
+
+predix:
+  ctf:
+    mock-chain: ${CTF_MOCK_CHAIN:true}
+    rpc-url: ${RPC_URL:http://127.0.0.1:8545}
+    chain-id: ${CHAIN_ID:80002}
+    operator-private-key: ${OPERATOR_PRIVATE_KEY:}
+    ctf-ops-address: ${CTF_OPS_ADDRESS:}
+    ctf-address: ${CTF_ADDRESS:}
+    collateral-token: ${COLLATERAL_TOKEN:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.predix.ctfgateway: INFO
